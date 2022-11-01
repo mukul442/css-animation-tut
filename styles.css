@@ -1,0 +1,282 @@
+.transform {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: translate(50px, 100px);
+  display: none;
+}
+
+.rotate {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  /* transform: rotate(20deg); clockwise */
+  transform: rotate(-30deg);
+  display: none;
+}
+
+.scale {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+  /* transform: scale(2,3); increases 2times of width and 3 times of height */
+  /* transform: scale(0.5, 0.5); decrease the width and height 0.5 times */
+  /* transform: scaleX(2); increases width by 2 */
+  /* transform: scaleX(0.5); decreases width by 0.5 */
+  /* transform: scaleY(2); */
+  /* transform: scaleY(0.5); */
+  display: none;
+}
+
+.skewX {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  /* transform: skewX(20deg); */
+  display: none;
+}
+
+.skewY {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  transform: skewY(20deg);
+  display: none;
+}
+
+.skew {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  transform: skew(20deg, 10deg);
+  display: none;
+}
+
+.matrix {
+  width: 300px;
+  height: 200px;
+  background-color: yellow;
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+  display: none;
+}
+
+.transition {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  display: none;
+}
+
+.transition:hover {
+  width: 300px;
+}
+
+.widthHeight {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 3s;
+  display: none;
+}
+
+.widthHeight:hover {
+  width: 300px;
+  height: 300px;
+}
+
+.linear {
+  width: 200px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  display: none;
+}
+
+.linear:hover {
+  width: 400px;
+}
+
+.ease {
+  width: 200px;
+  height: 100px;
+  background: yellow;
+  transition: width 2s;
+  transition-timing-function: ease;
+  display: none;
+}
+
+.ease:hover {
+  width: 400px;
+}
+
+.ease-in {
+  width: 200px;
+  height: 100px;
+  background: purple;
+  color: wheat;
+  transition: width 2s;
+  transition-timing-function: ease-in;
+  display: none;
+}
+
+.ease-in:hover {
+  width: 400px;
+}
+
+.ease-out {
+  width: 200px;
+  height: 100px;
+  background: pink;
+  transition: width 2s;
+  transition-timing-function: ease-out;
+  display: none;
+}
+
+.ease-out:hover {
+  width: 400px;
+}
+
+.ease-in-out {
+  width: 200px;
+  height: 100px;
+  background: orange;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+  display: none;
+}
+
+.ease-in-out:hover {
+  width: 400px;
+}
+
+.transition-transform {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transition: width 2s, height 2s, transform 2s;
+  display: none;
+}
+
+.transition-transform:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+
+.myTrasition {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transition-property: width;
+  transition-timing-function: linear;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  display: none;
+}
+
+.myTrasition:hover {
+  width: 200px;
+}
+
+.shorthand {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transition: width 2s linear 1s;
+  display: none;
+}
+
+.shorthand:hover {
+  width: 400px;
+}
+
+.example1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: background-color 2s linear;
+  display: none;
+}
+
+.example1:hover {
+  background-color: green;
+}
+
+/* @keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+} */
+
+/* @keyframes example {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: blueviolet;
+  }
+} */
+
+@keyframes example {
+  0% {
+    background-color: aqua;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: olive;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: gray;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  /* animation-delay: 2s; */
+  /* animation-iteration-count: 3; */
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  display: none;
+}
+
+.animation-shorthand {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation: example 5s linear 2s infinite alternate forwards;
+}
