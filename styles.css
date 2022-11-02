@@ -280,3 +280,8 @@
   position: relative;
   animation: example 5s linear 2s infinite alternate forwards;
 }
+
+.error {
+  outline: none;
+  border: 1px solid red;
+}
